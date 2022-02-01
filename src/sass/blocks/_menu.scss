@@ -59,26 +59,24 @@
         font-weight: bold;
         line-height: 36px;
         margin-bottom: 15px;
-        &:before {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: -35px;
-            width: 15px;
-            height: 15px;
-            border-radius: 100%;
-            border: 1px solid #000;
-        }
         a {
             color: #FFF;
             text-decoration: none;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: -35px;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                border: 1px solid #000;
+            }
             &:hover {
                 color: #000;
-            }
-        }
-        &:hover {
-            &:before {
-                background: #000;
+                &:before {
+                    background: #000;
+                }
             }
         }
     }
