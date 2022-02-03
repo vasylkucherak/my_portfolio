@@ -8,13 +8,6 @@
     left: 50px;
     height: 340px;
     z-index: 3;
-    &__link {
-        &:hover {
-            svg path {
-                fill: $main-color;
-            }
-        }
-    }
     &__divider {
         width: 2px;
         height: 70px;
@@ -31,6 +24,13 @@
             transform: rotate(-90deg) translate(-34%, -260%);
             display: block;
             width: 150px;
+        }
+    }
+    &__link {
+        &:hover {
+            svg path {
+                fill: $main-color;
+            }
         }
     }
 }
