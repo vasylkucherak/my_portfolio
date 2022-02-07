@@ -30,17 +30,19 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // Slider
-
     const slides = document.querySelectorAll('.resume__slider-slide'),
         slider = document.querySelector('.resume__slider'),
         prev = document.querySelector('.resume__slider-arrow-left'),
         next = document.querySelector('.resume__slider-arrow-right'),
         slidesWrapper = document.querySelector('.resume__slider-wrapper'),
-        slidesField = document.querySelector('.resume__slider-field');
+        slidesField = document.querySelector('.resume__slider-field'),
+        select = document.getElementsByClassName('select');
 
     let offset = 0,
         slideIndex = 1,
         width = '660px';
+
+    select[slideIndex - 1].classList.add('active');
     
     slidesField.style.width = 100 * slides.length + '%';
     slidesField.style.display = 'flex';
@@ -110,9 +112,13 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesField.style.transform = `translateX(-${offset}px)`;
 
         if (slideIndex == slides.length) {
+            select[slideIndex - 1].classList.remove('active');
             slideIndex = 1;
+            select[slideIndex - 1].classList.add('active');
         } else {
+            select[slideIndex - 1].classList.remove('active');
             slideIndex++;
+            select[slideIndex - 1].classList.add('active');
         }
 
         dots.forEach(dot => dot.style.opacity = ".5");
@@ -129,9 +135,13 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesField.style.transform = `translateX(-${offset}px)`;
 
         if (slideIndex == 1) {
+            select[slideIndex - 1].classList.remove('active');
             slideIndex = slides.length;
+            select[slideIndex - 1].classList.add('active');
         } else {
+            select[slideIndex - 1].classList.remove('active');
             slideIndex--;
+            select[slideIndex - 1].classList.add('active');
         }
 
         dots.forEach(dot => dot.style.opacity = ".5");
@@ -142,7 +152,9 @@ window.addEventListener('DOMContentLoaded', () => {
         dot.addEventListener('click', (e) => {
             const slideTo = e.target.getAttribute('data-slide-to');
 
+            select[slideIndex - 1].classList.remove('active');
             slideIndex = slideTo;
+            select[slideIndex - 1].classList.add('active');
             offset = deleteNotDigits(width) * (slideTo - 1);
 
             slidesField.style.transform = `translateX(-${offset}px)`;
