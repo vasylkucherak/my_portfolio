@@ -2,7 +2,10 @@
     padding-top: 30px;
     padding-bottom: 90px;
     &__wrapper {
-        padding: 60px 65px 0 65px;
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: 390px 740px;
+        column-gap: 10px;
         &-title {
             position: relative;
             padding-left: 35px;
@@ -58,6 +61,9 @@
             font-size: 12px;
             line-height: 18px;
             width: 375px;
+            span {
+                padding-left: 20px;
+            }
         }
         &-icon {
             position: absolute;
@@ -73,6 +79,39 @@
         &-location {
             font-size: 12px;
             line-height: 18px;
+        }
+    }
+    &__slider {
+        display: flex;
+        align-items: center;
+        &-wrapper { 
+            width: 660px;
+            height: 490px;
+        }
+        &-arrow {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            &:active {
+                height: 38px;
+            }
+            path {
+                fill: $main-color;
+            }
+            &-left {
+                transform: rotate(180deg);
+            }
+        }
+        &-field {
+            height: 100%;
+        }
+        &-slide {
+            height: 100%;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
