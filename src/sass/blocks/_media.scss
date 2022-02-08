@@ -38,6 +38,7 @@
             }
         }
         &__slider {
+            width: 620px;
             &-wrapper { 
                 width: 560px;
                 height: 410px;
@@ -100,6 +101,30 @@
 @media (max-width: 991px) {
     .container {
         max-width: 720px;
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 280px 420px;
+            column-gap: 20px;
+            row-gap: 0;
+        }
+        &__skills {
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+            column-gap: 0;
+            row-gap:10px;
+            &-item {
+                grid-template-columns: 35px 175px;
+                column-gap: 0;
+            }
+            &-circle {
+                padding: 10px 0 0 9px;
+                &:before {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
     }
     .resume {
         &__wrapper {
@@ -184,6 +209,37 @@
             font-size: 40px;
         }
     }
+    .about {
+        &__wrapper {
+            grid-template-columns: repeat(2, 260px);
+            column-gap: 20px;
+            row-gap: 10px;
+        }
+        &__photo {
+            grid-row: 1 / 2;
+        }
+        &__subtitle {
+            font-size: 26px;
+        }
+        &__skills {
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+            grid-column: 1 / 3;
+            column-gap: 0;
+            row-gap:10px;
+            &-item {
+                grid-template-columns: 35px 175px;
+                column-gap: 0;
+            }
+            &-circle {
+                padding: 10px 0 0 9px;
+                &:before {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
     .resume {
         &__wrapper {
             flex-direction: column;
@@ -198,6 +254,7 @@
             }
         }
         &__slider {
+            width: 540px;
             &-wrapper { 
                 width: 540px;
                 height: 410px;
@@ -307,6 +364,36 @@
             font-size: 32px;
         }
     }
+    .about {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__subtitle {
+            font-size: 26px;
+        }
+        &__photo {
+            width: 300px;
+            height: 400px;
+        }
+        &__skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-item {
+                grid-template-columns: 35px 175px;
+                column-gap: 0;
+            }
+            &-circle {
+                padding: 10px 0 0 9px;
+                &:before {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
     .resume {
         &__item {
             &-head {
@@ -320,8 +407,9 @@
             }
         }
         &__slider {
+            width: 300px;
             &-wrapper { 
-                width: 310px;
+                width: 300px;
                 height: 230px;
             }
         }
