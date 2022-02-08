@@ -37,10 +37,11 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesWrapper = document.querySelector('.resume__slider-wrapper'),
         slidesField = document.querySelector('.resume__slider-field'),
         select = document.getElementsByClassName('select');
+    
+    let width = window.getComputedStyle(slidesWrapper).width;
 
     let offset = 0,
-        slideIndex = 1,
-        width = '660px';
+        slideIndex = 1;
 
     select[slideIndex - 1].classList.add('active');
     

@@ -27,6 +27,27 @@
             }
         }
     }
+    .resume {
+        &__wrapper {
+            grid-template-columns: 340px 640px;
+            column-gap: 0;
+        }
+        &__item {
+            &-location {
+                width: 160px;
+            }
+        }
+        &__slider {
+            &-wrapper { 
+                width: 560px;
+                height: 410px;
+            }
+            &-arrow {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
     .skills {
         &__wrapper {
             padding: 60px 0 0 0;
@@ -79,6 +100,29 @@
 @media (max-width: 991px) {
     .container {
         max-width: 720px;
+    }
+    .resume {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            display: flex;
+            &-body {
+                padding-top: 36px;
+            }
+        }
+        &__slider {
+            &-wrapper { 
+                width: 640px;
+                height: 480px;
+            }
+            &-arrow {
+                width: 40px;
+                height: 40px;
+            }
+        }
     }
     .skills {
         &__wrapper {
@@ -138,6 +182,29 @@
     .title {
         &_fz48 {
             font-size: 40px;
+        }
+    }
+    .resume {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__item {
+            display: block;
+            &-location {
+                width: 260px;
+            }
+            &-body {
+                padding-top: 0;
+            }
+        }
+        &__slider {
+            &-wrapper { 
+                width: 540px;
+                height: 410px;
+            }
+            &-arrow {
+                display: none;
+            }
         }
     }
     .skills {
@@ -238,6 +305,25 @@
     .title {
         &_fz48 {
             font-size: 32px;
+        }
+    }
+    .resume {
+        &__item {
+            &-head {
+                width: 300px;
+            }
+            &-location {
+                width: 160px;
+            }
+            &-body {
+                width: 300px;
+            }
+        }
+        &__slider {
+            &-wrapper { 
+                width: 310px;
+                height: 230px;
+            }
         }
     }
     .skills {
