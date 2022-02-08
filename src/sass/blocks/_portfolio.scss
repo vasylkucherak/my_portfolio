@@ -8,11 +8,11 @@
         grid-template: repeat(2, 280px) / repeat(4, 280px);
         grid-auto-rows: 280px;
         gap: 5px;
-        .plans {
+        .uber {
             grid-row: 1 / 3;
             grid-column: 4 / 5;
         }
-        .mac {
+        .wordpress {
             grid-row: 2 / 3;
             grid-column: 2 / 4;
         }
