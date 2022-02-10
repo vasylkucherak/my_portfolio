@@ -1446,6 +1446,7 @@ p#consultation {
     display: none;
   }
   .header .burger img {
+    display: block;
     width: 2rem;
     height: 2rem;
     margin: 0 1rem;
@@ -1458,6 +1459,16 @@ p#consultation {
   }
   .main h1 {
     text-align: center;
+  }
+  .main .main__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .slider {
+    order: 2;
+  }
+  .main .text {
+    order: 1;
   }
   .promo p,
   .promo h2 {
@@ -1523,6 +1534,9 @@ p#consultation {
   .promo-2 img {
     left: -10%;
   }
+  .feedback {
+    height: 500px;
+  }
   .feedback-heading {
     font-size: 2rem;
   }
@@ -1531,6 +1545,9 @@ p#consultation {
   }
   .feedback .button-order {
     left: 11rem;
+  }
+  .feedback .feedback-block img {
+    width: 270px;
   }
   .often-questions .spirt {
     display: none;
@@ -1548,6 +1565,9 @@ p#consultation {
   }
 }
 @media (max-width: 767px) {
+  .main .main-slider img {
+    width: 546px;
+  }
   .main-features {
     max-width: 30rem;
     margin-left: auto;
@@ -1601,6 +1621,9 @@ p#consultation {
   .card-3 img {
     float: right;
   }
+  .feedback {
+    height: 630px;
+  }
   .feedback-slider-item {
     padding-bottom: 0;
   }
@@ -1615,6 +1638,11 @@ p#consultation {
     left: 50%;
     transform: translateX(-50%);
     width: 18rem;
+  }
+  .feedback .feedback-block img {
+    width: 270px;
+    display: block;
+    margin: 0 auto;
   }
   .consultation {
     padding: 6rem 0;
@@ -1635,6 +1663,9 @@ p#consultation {
   }
   .p-heading {
     font-size: 1.5rem;
+  }
+  .main .main-slider img {
+    width: 290px;
   }
   .main-features {
     max-width: auto;
@@ -1746,6 +1777,7 @@ p#consultation {
   }
   .feedback {
     padding: 5rem 0;
+    height: 750px;
   }
   .feedback .main-next-btn {
     right: -1rem;
