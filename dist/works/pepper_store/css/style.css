@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext);
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 * {
     box-sizing: border-box;
@@ -84,8 +85,16 @@ a {
     max-width: 170px
 }
 
-.header__logo img {
-    width: 100%
+.header__logo a {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo span {
+    margin: 4px 0 0 5px;
+    font-weight: bold;
+    font-family: 'Shadows Into Light', cursive;
+    color: #000
 }
 
 .header__links {
@@ -104,13 +113,17 @@ a {
 .header__link:after {
     content: '';
     position: absolute;
-    display: block;
+    display: none;
     width: 110%;
     left: -5%;
     bottom: -1px;
     z-index: -1;
     height: 8px;
     background: #54ed39
+}
+
+.header__link:hover:after {
+    display: block;
 }
 
 .header__link:last-child {
@@ -612,8 +625,20 @@ a {
     color: #fff
 }
 
+.footer .link:hover {
+    color: #54ed39;
+}
+
 .footer .call {
     text-align: right
+}
+
+.pepper:hover a svg path.tail {
+    fill: #54ed39;
+}
+
+.pepper:hover a span {
+    color: #54ed39;
 }
 
 .modal {
@@ -693,7 +718,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    z-index: 100
 }
 
 .sidepanel__text {
