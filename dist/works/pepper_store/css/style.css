@@ -47,7 +47,7 @@ a {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1160px;
     margin: 0 auto
 }
 
@@ -71,14 +71,17 @@ a {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    width: 1130px;
+    margin: 0 auto;
     margin-top: 10px;
-    padding: 0 100px
+    padding: 0;
 }
 
 .header__left-block {
     display: flex;
     justify-content: space-between;
-    min-width: 550px
+    width: 697px;
+    min-width: 0;
 }
 
 .header__logo {
@@ -148,9 +151,9 @@ a {
     right: 0;
     top: -155px;
     width: 50vw;
-    height: 900px;
+    height: 100vh;
     background: rgba(146, 242, 255, .15);
-    z-index: -1
+    z-index: -10
 }
 
 .tabcontainer {
@@ -174,15 +177,15 @@ a {
 
 .tabcontent__descr {
     position: absolute;
-    top: calc(45vh - 60px);
+    bottom: -40px;
     right: -177px;
     width: 550px;
-    height: 50vh;
+    height: 40vh;
     background: rgba(251, 254, 93, .8);
-    padding: 40px;
+    padding: 10px 30px;
     font-size: 24px;
     font-weight: 300;
-    line-height: 36px;
+    line-height: 33px;
     color: rgba(0, 0, 0, .7)
 }
 
@@ -200,7 +203,6 @@ a {
 .tabheader__items {
     margin-top: 35px;
     padding-left: 26px;
-    border-left: 1px solid #000
 }
 
 .tabheader__item {
@@ -210,7 +212,7 @@ a {
     margin-top: 10px;
     color: rgba(0, 0, 0, .6);
     cursor: pointer;
-    transition: .3s all
+    transition: .3s all;
 }
 
 .tabheader__item_active {
@@ -770,4 +772,580 @@ a {
     to {
         opacity: 1;
     }
+}
+
+@media (max-width: 1260px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container, .header {
+        width: 950px;
+    }
+    .sidepanel {
+        display: flex;
+    }
+    .header__left-block {
+        width: 608px;
+    }
+    .tabcontainer {
+        width: 100%;
+    }
+    .tabcontent {
+        width: 100%;
+    }
+    .tabheader h3{
+        font-size: 15px;
+    }
+    .btn {
+        width: 200px;
+        font-size: 17px;
+    }
+    .tabcontent__descr {
+        width: 450px;
+        font-size: 21px;
+        line-height: 30px;
+        padding: 10px 25px;
+    }
+    .offer .bgc_y {
+        width: 100vw; 
+    }
+    .menu__item {
+        width: 300px;
+        position: relative;
+        min-height: 470px;
+    }
+    .menu__item-divider{
+        position: absolute;
+        bottom: 49px;
+        left: 0;
+    }
+    .menu__item-price {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 300px;
+    }
+    .order__form {
+        padding: 0 42px;
+    }
+    .promotion__timer .timer {
+        padding-left: 10px;
+    }
+    element.style {
+        width: 650px;
+    }
+    .offer__slider {
+        width: 620px;
+    }
+}
+
+@media (max-width: 1080px){
+    .sidepanel {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .container, .header {
+        width: 730px;
+    }
+    .header__left-block {
+        width: 497px;
+    }
+    .btn {
+        width: 180px;
+        font-size: 16px;
+    }
+    .tabheader {
+        width: 280px;
+        padding: 35px 10px;
+    }
+    .tabheader__items {
+        padding-left: 10px;
+    }
+    .tabheader__item_active {
+        font-size: 18px;
+    }
+    .tabcontent__descr {
+        width: 400px;
+        font-size: 19px;
+        line-height: 27px;
+    }
+    .title {
+        font-size: 26px;
+    }
+    .offer__descr {
+        width: 520px;
+    }
+    .offer__advantages {
+        width: 280px;
+    }
+    .offer__slider {
+        width: 440px;
+    }
+    .calculating__choose_medium {
+        width: 620px;
+    }
+    .calculating__choose_big {
+        width: 690px;
+    }
+    .calculating__choose-item, .calculating__choose_big .calculating__choose-item {
+        width: 148px;
+    }
+    .menu__item {
+        width: 235px;
+    }
+    .menu__item img {
+        height: 160px;
+    }
+    .menu__item-subtitle, .menu__item-descr {
+        margin-top: 10px;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .menu__item-price {
+        width: 235px;
+    }
+    .order__form {
+        padding: 0;
+    }
+    .order__input {
+        width: 210px;
+    }
+    .promotion {
+        padding-bottom: 100px;
+    }
+    .promotion__timer .timer__block {
+        width: 80px;
+        height: 100px;
+    }
+    .promotion__timer .timer__block span {
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container, .header {
+        width: 550px;
+    }
+    .header__left-block {
+        width: 392px;
+    }
+    .header__link {
+        font-size: 16px;
+    }
+    .btn {
+        width: 140px;
+        font-size: 14px;
+    }
+    .tabheader {
+        width: 280px;
+        padding: 35px 10px;
+    }
+    .tabheader__items {
+        padding-left: 10px;
+        margin: 0;
+    }
+    .tabheader__item_active {
+        font-size: 18px;
+    }
+    .tabcontent__descr {
+        width: 350px;
+        font-size: 19px;
+    }
+    .preview__life {
+        margin-top: 45px;
+    }
+    .offer {
+        margin-top: 30px;
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+    .offer .container {
+        flex-wrap: wrap;
+    }
+    .offer__text {
+        width: 380px;
+    }
+    .offer__descr {
+        width: 380px;
+    }
+    .offer__advantages, .offer__slider {
+        width: 550px;
+    }
+    .offer__slider {
+        margin-top: 20px;
+        order: 1;
+    }
+    .offer__advantages {
+        margin-top: 30px;
+        order: 2;
+        width: 550px;
+    }
+    .offer__advantages h2:first-child {
+        margin-top: 0;
+    }
+    .calculating {
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+    .calculating__choose_big {
+        width: 540px;
+    }
+    .calculating__choose_medium{
+        width: 405px;
+    }
+    .calculating__choose-item, .calculating__choose_big .calculating__choose-item {
+        width: 135px;
+    }
+    .calculating__total {
+        width: 420px;
+    }
+    .menu .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu__field {
+        margin-top: 30px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .menu__item {
+        width: 460px;
+        margin: 10px;
+        min-height: 355px;
+    }
+    .menu__item-subtitle {
+        text-align: center;
+    }
+    .menu__item-price {
+        width: 460px;
+    }
+    .title {
+        font-size: 22px;
+    }
+    .order {
+        padding-bottom: 40px;
+    }
+    .order__input {
+        width: 135px;
+    }
+    .order__form {
+        margin-top: 40px;
+    }
+    .promotion {
+        padding: 40px 0;
+    }
+    .promotion .container {
+        flex-direction: column;
+    }
+    .promotion__text {
+        width: 530px;
+        margin: 0 auto;
+    }
+    .promotion__text .title {
+        text-align: center;
+    }
+    .promotion__descr {
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .promotion__timer {
+        width: 450px;
+        margin: 0 auto;
+    }
+    .promotion__timer .title {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .promotion__timer .timer {
+        margin-top: 30px;
+        padding-left: 0;
+    }
+    .promotion__timer .timer__block {
+        width: 100px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container, .header {
+        width: 310px;
+    }
+    .header {
+        height: 30px;
+        margin-top: 5px;
+    }
+    .header__logo {
+        width: 100px;
+        height: 40px;
+    }
+    .header__left-block {
+        width: 222px;
+    }
+    .header__link {
+        font-size: 10px;
+        margin-right: 10px;
+    }
+    .header .pepper {
+        height: 30px;
+        width: 80px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    .header .pepper span{
+        font-size: 11px;
+    }
+    .header .pepper a{
+        height: 30px;
+    }
+    .header .pepper svg{
+        height: 30px;
+    }
+    .header .btn {
+        padding: 0 5px;
+        width: 80px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .bgc_blue {
+        height: 600px;
+    }
+    .promo {
+        height: 550px;
+    }
+    .tabcontainer {
+        flex-direction: column;
+        height: 460px
+    }
+    .tabcontainer img {
+        height: 300px
+    }
+    .tabheader {
+        width: 310px;
+        padding: 10px 5px;
+        order: 1;
+    }
+    .tabheader h3 {
+        font-size: 13px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .tabheader__items {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 2px;
+        margin: 0;
+    }
+    .tabheader__item, .tabheader__item_active {
+        display: inline-block;
+        font-size: 10px;
+        line-height: 14px;
+        margin: 0;
+    }
+    .tabcontent {
+        order: 2;
+        width: 310px;
+    }
+    .tabcontent__descr {
+        position: static;
+        width: 310px;
+        height: 100px;
+        line-height: 16px;
+        font-size: 12px;
+        padding: 6px;
+    }
+    .preview {
+        padding-top: 5px;
+        padding-bottom: 0;
+    }
+    .preview__life {
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: center;
+        font-size: 16px;
+    }
+    .divider {
+        width: 310px;
+    }
+    .offer {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .offer .container {
+        justify-content: center;
+    }
+    .offer__text {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+    .offer__descr {
+        width: 300px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .offer .btn.btn_dark {
+        width: 140px;
+        height: 40px;
+    }
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .offer {
+        padding: 20px 0;
+    }
+    .offer .btn {
+        width: 120px;
+    }
+    .offer__descr {
+        margin-top: 20px;
+    }
+    .offer__slider {
+        margin-top: 20px;
+        width: 300px;
+        height: 280px;
+    }
+    .offer__slider-counter {
+        width: 150px;
+    }
+    .offer__slider-prev {
+        margin-right: 5px;
+    }
+    .offer__slider-next {
+        margin-left: 5px;
+    }
+    .offer__slider #current {
+        font-size: 30px;
+    }
+    .offer__slider #total {
+        font-size: 18px;
+    }
+    .offer__advantages {
+        margin-top: 20px;
+        width: 300px;
+    }
+    .offer__advantages h2 {
+        font-size: 16px;
+    }
+    .offer__advantages-text {
+        font-size: 14px;
+    }
+    .calculating {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+    .calculating__field {
+        margin-top: 20px;
+    }
+    .calculating__choose_medium, .calculating__choose_big {
+        width: 310px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #low, #small, #medium, #high {
+        width: 180px;
+    }
+    .calculating__choose-item {
+        margin-bottom: 5px;
+    }
+    .divider, .calculating__divider {
+        width: 300px;
+    }
+    .calculating__total {
+        width: 300px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .calculating__subtitle {
+        font-size: 14px;
+    }
+    .menu {
+        padding: 0;
+        margin-top: 20px;
+    }
+    .menu__field {
+        margin-top: 0;
+        padding: 5px 0;
+    }
+    .menu__item {
+        width: 280px;
+        min-height: 410px;
+    }
+    .menu__item-price {
+        width: 280px;
+    }
+    .menu .title {
+        margin-bottom: 20px;
+    }
+    .order {
+        padding: 20px 0;
+    }
+    .order__form {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .order__form img, .order__form input, .order__form button {
+        margin: 10px 0;
+    }
+    .order__input {
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .btn.btn_dark.btn_min {
+        width: 180px;
+        height: 40px;
+    }
+    .promotion {
+        padding: 20px 0 30px 0;
+    }
+    .promotion__text, .promotion__timer {
+        width: 300px;
+    }
+    .promotion__descr {
+        font-size: 14px;
+        text-align: center;
+    }
+    .promotion__timer .timer__block {
+        width: 70px;
+        height: 90px;
+    }
+    .promotion__timer .timer__block span {
+        font-size: 50px;
+        margin-top: 5px;
+    }
+    .footer {
+        padding-bottom: 30px;
+    }
+    .footer .container {
+        width: 300px;
+        flex-wrap: wrap;
+    }
+    .pepper {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        order: 3;
+        margin-top: 20px;
+    }
+    .social {
+        width: 150px;
+        order: 1;
+    }
+    .call {
+        width: 150px;
+        order: 2;
+    }
+    .footer .subtitle {
+        font-size: 17px;
+    }
+    
 }
