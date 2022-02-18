@@ -1308,6 +1308,7 @@ p#consultation {
   text-align: center;
 }
 .pageup {
+  pointer-events: none;
   opacity: 0;
   width: 26px ;
   height: 26px;
@@ -1319,6 +1320,33 @@ p#consultation {
   cursor: pointer;
   border: 1px solid white;
   transition: 1s all;
+}
+.animated {
+  animation-duration:1s;
+  animation-fill-mode:both;
+}
+.fadeIn {
+  animation-name:fadeIn;
+  pointer-events: auto;
+}
+.fadeOut {
+  animation-name:fadeOut;
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
 }
 @media (max-width: 1399px) {
   .paints {
