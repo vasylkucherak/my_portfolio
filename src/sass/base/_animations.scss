@@ -1,0 +1,17 @@
+.title.title_fz48.promo__title, .skills__item, .portfolio__item, .contact_card {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: all 1s;
+}
+.title.title_fz48.promo__title.actived, .skills__item.actived, .portfolio__item.actived, .contact_card.actived {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.filling {
+    transition: all 1s ease-out;
+}
+
+.contact_card {
+    transform: translate(0, 0);
+}
