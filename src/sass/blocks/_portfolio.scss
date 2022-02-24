@@ -1,7 +1,11 @@
 .portfolio {
+    position: relative;
     padding-top: 30px;
-    padding-bottom: 40px;
-
+    padding-bottom: 20px;
+    background-color: #fff;
+    .divider_wide {
+        margin-top: 100px;
+    }
     &__wrapper {
         margin-top: 30px;
         display: grid;

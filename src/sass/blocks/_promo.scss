@@ -1,13 +1,24 @@
 .promo {
-    min-height: 100vh;
+    min-height: calc(100vh - 205px);
     position: relative;
-    background: url('../img/main_bg.jpg') no-repeat 50% / cover;
-    padding-top: 205px;
+    
+    &__bg {
+        min-height: 100vh;
+        width: 100vw;
+        transform: translateY(-205px);
+        position: fixed;
+        background: url('../img/main_bg.jpg') no-repeat 50% / cover;
+    }
+    .hamburger {
+        position: fixed;
+        z-index: 10;
+    }
     &__title {
         margin-top: 10px;
         width: 600px;
     }
     &__subtitle {
+        margin-top: 205px;
         position: relative;
         padding-left: 11px;
         z-index: 2;

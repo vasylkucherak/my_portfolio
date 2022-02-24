@@ -1,6 +1,11 @@
 .resume {
+    position: relative;
     padding-top: 30px;
-    padding-bottom: 90px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    .divider_wide {
+        margin-top: 80px;
+    }
     &__wrapper {
         padding-top: 60px;
         display: grid;
@@ -69,6 +74,7 @@
             position: absolute;
             top: 50px;
             left: 45px;
+            z-index: 1;
             @include before_circle;
             img {
                 position: absolute;

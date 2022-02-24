@@ -1,6 +1,11 @@
 .skills {
+    position: relative;
     padding-top: 30px;
-    padding-bottom: 90px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    .divider_wide {
+        margin-top: 70px;
+    }
     &__title {
     padding-top: 125px;
     }
