@@ -119,4 +119,63 @@ $(document).ready(function(){
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;
     });
+
+    // animationByScroll
+    let isScrolling = false;
+ 
+    window.addEventListener("scroll", throttleScroll, false);
+
+    function throttleScroll(e) {
+        if (isScrolling == false) {
+            window.requestAnimationFrame(function() {
+                scrolling(e);
+                isScrolling = false;
+            });
+        }
+        isScrolling = true;
+    }
+
+    document.addEventListener("DOMContentLoaded", scrolling, false);
+
+    const animItems = document.querySelectorAll(".reviews-item");
+
+    function scrolling(e) {
+
+        for (let i = 0; i < animItems.length; i++) {
+            const animItem = animItems[i];
+
+            if (isHalfyVisible(animItem)) {
+                animItem.classList.add("active");
+            }
+        }
+    }
+
+    function isFullyVisible(el) {
+        const elementBoundary = el.getBoundingClientRect();
+
+        const top = elementBoundary.top;
+        const bottom = elementBoundary.bottom;
+
+        return ((top >= 0) && (bottom <= window.innerHeight));
+    }
+
+    function isHalfyVisible(el) {
+        const elementBoundary = el.getBoundingClientRect();
+
+        const top = elementBoundary.top;
+        const bottom = elementBoundary.bottom;
+        const half = elementBoundary.height / 2;
+
+        return ((top + half >= 0) && (half + window.innerHeight >= bottom));
+    }
+
+    function isPartiallyVisible(el) {
+        const elementBoundary = el.getBoundingClientRect();
+
+        const top = elementBoundary.top;
+        const bottom = elementBoundary.bottom;
+        const height = elementBoundary.height;
+
+        return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    }
 });

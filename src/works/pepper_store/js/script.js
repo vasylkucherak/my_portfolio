@@ -1,8 +1,9 @@
 import scroll from './modules/scroll';
 import tabs from './modules/tabs';
 import modal from './modules/modal';
-import timer from './modules/timer';
 import cards from './modules/cards';
+import animationByScroll from './modules/animationByScroll';
+import timer from './modules/timer';
 import calc from './modules/calc';
 import forms from './modules/forms';
 import slider from './modules/slider';
@@ -15,8 +16,9 @@ window.addEventListener('DOMContentLoaded', function() {
     scroll();
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     modal('[data-modal]', '.modal', modalTimerId);
-    timer('.timer', '2022-05-20');
     cards();
+    animationByScroll();
+    timer('.timer', '2022-05-20');
     calc();
     forms('form', modalTimerId);
     slider({
