@@ -6,7 +6,23 @@ window.addEventListener('DOMContentLoaded', () => {
         'turkey': {'count': 0, 'price': 1450, 'title': 'Индейка', 'weight': 650, 'descr': 'Фаршированный гречневой кашей,<br>курагой, апельсином и зеленым яблоком', 'class': 'meat'},
         'fish': {'count': 0, 'price': 1900, 'title': 'Рыба', 'weight': 775, 'descr': 'Фаршированная яблоками и лимоном', 'class': 'fish'},
         'duck': {'count': 0, 'price': 1230, 'title': 'Утка', 'weight': 525, 'descr': 'Фаршированная рисом, курагой и айвой', 'class': 'meat'},
-        'pepperoni': {'count': 0, 'price': 1100, 'title': 'Пицца "Пепперони"', 'weight': 500, 'descr': 'Кальмары, мидии, креветки, сыр маасдам, красный лук, микс оливок, базилик, соус песто', 'class': 'warm'}
+        'mushroom-cream-soup': {'count': 0, 'price': 720, 'title': 'Грибной крем суп', 'weight': 320, 'descr': 'Шампиньоны, куриное филе, сливки, чеснок, укроп', 'class': 'soup'},
+        'borsch': {'count': 0, 'price': 780, 'title': 'Борщ', 'weight': 350, 'descr': 'свинные ребрышки, свекла, картошка, петрушка, морковы, лук', 'class': 'soup meat'},
+        'okinawa-sushi': {'count': 0, 'price': 2060, 'title': 'Суши "Окинава"', 'weight': 260, 'descr': 'Угорь, креветка, сливочный сыр', 'class': 'sushi fish'},
+        'keishi-sushi': {'count': 0, 'price': 1940, 'title': 'Суши "Кейши"', 'weight': 240, 'descr': 'Лосось, тунец, креветка, авокадо, икра тобико', 'class': 'sushi fish'},
+        'pepperoni': {'count': 0, 'price': 1260, 'title': 'Пицца "Пепперони"', 'weight': 500, 'descr': 'Кр. соус, сыр, салями, ветчина, бекон, чери, перец пепперони, специи', 'class': 'pizza meat'},
+        'chease4': {'count': 0, 'price': 1350, 'title': 'Пицца "4 сыра"', 'weight': 500, 'descr': 'Бел. соус, моцарелла, дор-блю, бри, пармезан, специи', 'class': 'pizza'},
+        'hawaiian': {'count': 0, 'price': 1080, 'title': 'Пицца "Гавайская"', 'weight': 500, 'descr': 'Кр. соус, сыр, куриное филе, ананасы, специи', 'class': 'pizza meat'},
+        'kalcone': {'count': 0, 'price': 1260, 'title': 'Пицца "Кальцоне"', 'weight': 500, 'descr': 'Моцарелла, куриное филе, шампиньоны, томаты, базилик, специи', 'class': 'pizza meat'},
+        'margherita': {'count': 0, 'price': 1080, 'title': 'Пицца "Маргаритта"', 'weight': 500, 'descr': 'Моцарелла, томаты, фирменный томатный соус, специи', 'class': 'pizza'},
+        'bavarian': {'count': 0, 'price': 1080, 'title': 'Пицца "Баварская"', 'weight': 500, 'descr': 'Кр. соус, колбаски, сыр, шампиньоны, томаты, специи', 'class': 'pizza meat'},
+        'tartaletki': {'count': 0, 'price': 380, 'title': 'Тарталетки', 'weight': 180, 'descr': 'Куриное филе, ананас, сыр, чеснок, грецкий орех, соус', 'class': 'cold meat&#sushi'},
+        'canape': {'count': 0, 'price': 450, 'title': 'Канапе', 'weight': 180, 'descr': 'Красная рыба, авокадо, огурец, оливки, чёрный хлеб', 'class': 'cold fish'},
+        'chips': {'count': 0, 'price': 320, 'title': 'Фирменные чипсы', 'weight': 180, 'descr': 'Картофельные чипсы, томатный соус, специи', 'class': 'cold'},
+        'beer': {'count': 0, 'price': 250, 'title': 'Фирменное пиво', 'weight': 500, 'descr': 'Хмель, ячменный солод, дрожжи', 'class': 'drink'},
+        'fresh': {'count': 0, 'price': 350, 'title': 'Арбузный фреш', 'weight': 300, 'descr': 'Арбуз, лайм, мята', 'class': 'drink'},
+        'coffe': {'count': 0, 'price': 200, 'title': 'Коффе', 'weight': 150, 'descr': 'Молотый кофе, сливки', 'class': 'drink'},
+        'tea': {'count': 0, 'price': 150, 'title': 'Чай', 'weight': 200, 'descr': 'Черный чай, лимон', 'class': 'drink'}
     };
     // витягування елементів html
     const headerCounter = document.querySelector('.header__basket-counter'),  // лічильник шапки
@@ -56,6 +72,72 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const btnAll = menuPanel.querySelector('#all'),                   // кнопка всі
+          btnCold = menuPanel.querySelector('#cold'),               // кнопка "холодні закуски"
+          btnMeat = menuPanel.querySelector('#meat'),             // кнопка другий фільтр
+          btnFish = menuPanel.querySelector('#fish'),               // кнопка третій фільтр
+          btnSoup = menuPanel.querySelector('#soup'),             // кнопка четвертий фільтр
+          btnSushi = menuPanel.querySelector('#sushi'),               // кнопка п'ятий фільтр
+          btnPizza = menuPanel.querySelector('#pizza'),               // кнопка шостий фільтр
+          btnDrink = menuPanel.querySelector('#drink'),
+          markAll = cardsWrapper.querySelectorAll('.all'),            // елементи фільтру all 
+          markCold = cardsWrapper.querySelectorAll('.cold'),        // елементи фільтру firts
+          markMeat = cardsWrapper.querySelectorAll('.meat'),      // елементи фільтру second
+          markFish = cardsWrapper.querySelectorAll('.fish'),        // елементи фільтру third
+          markSoup = cardsWrapper.querySelectorAll('.soup'),      // елементи фільтру fourth
+          markSushi = cardsWrapper.querySelectorAll('.sushi'),        // елементи фільтру fifth
+          markPizza = cardsWrapper.querySelectorAll('.pizza'),
+          markDrink = cardsWrapper.querySelectorAll('.drink');
+
+    const typeFilter = (markType) => {               // функція для довільної марки
+        markAll.forEach(mark => {                        // перебір елементів з класом all
+            mark.style.display = 'none';                   // ховаємо всі елементи
+            mark.classList.remove('animated', 'fadeIn');
+        });
+
+        if (markType) {                                  // якщо ми вказали mark (тобто в цьому фільтрі є елементи)
+            markType.forEach(mark => {                      // перебір елементів цього фільтру
+                mark.style.display = 'block';               // показуємо елементи
+                mark.classList.add('animated', 'fadeIn');
+            });
+        } else {                                          // якщо ми не вказали mark (тобто в цьому фільтрі елементів немає)
+            no.style.display = 'block';                   // показуємо блок no 
+            no.classList.add('animated', 'fadeIn');
+        }
+    };
+
+    btnAll.addEventListener('click', () => {      // при натисканні на фільтер all
+        typeFilter(markAll);                      // викликається функція для ціого фільтра
+    });
+
+    btnCold.addEventListener('click', () => {    // при натисканні на фільтер first
+        typeFilter(markCold);                    // викликається функція для ціого фільтра
+    });
+
+    btnMeat.addEventListener('click', () => {   // при натисканні на фільтер secons
+        typeFilter(markMeat);                   // викликається функція для ціого фільтра
+    });
+
+    btnFish.addEventListener('click', () => {    // при натисканні на фільтер third
+        typeFilter(markFish);                    // викликається функція для ціого фільтра
+    });
+
+    btnSoup.addEventListener('click', () => {   // при натисканні на фільтер fourth
+        typeFilter(markSoup);                   // викликається функція для ціого фільтра
+    });
+
+    btnSushi.addEventListener('click', () => {    // при натисканні на фільтер fifth
+        typeFilter(markSushi);                    // викликається функція для ціого фільтра
+    });
+
+    btnPizza.addEventListener('click', () => {    // при натисканні на фільтер sixth
+        typeFilter(markPizza);                             // викликається функція для нульового елемента (виконається друга частина функції з no)
+    });
+
+    btnDrink.addEventListener('click', () => {    // при натисканні на фільтер sixth
+        typeFilter(markDrink);                             // викликається функція для нульового елемента (виконається друга частина функції з no)
+    });
+
     //===================================== КНОПКИ МЕНЮ ================================================= 
     const cards = cardsWrapper.querySelectorAll('.card');  // кожна сформована картка меню
 
@@ -88,7 +170,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    //==================== ВІДКРИТТЯ МОДАЛЬНОГО ВІКНА ===================================================
+    //==================== ВІДКРИТТЯ МОДАЛЬНИХ ВІКОН ===================================================
     function bindModal(triggerSelector, modalSelector, closeSelector, submitSelector, closeOnModalClick = false) {
 
         const trigger = document.querySelectorAll(triggerSelector),
@@ -285,6 +367,59 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
             button.classList.add('blocked');
             finishPrice.classList.add('danger');
+        }
+    }
+
+    //==================================== ПЕРЕМИКАЧІ У МОДАЛЬНОМУ ВІКНІ ======================================
+    const importRadioBtn = document.querySelectorAll('.import'),
+          payRadioBtn = document.querySelectorAll('.pay');
+
+    const toggleRadioBtn = (selectors) => {
+        selectors.forEach(selector => {
+            selector.addEventListener('click', () => {
+                selectors.forEach(selector => selector.classList.remove('active'));
+                selector.classList.add('active'); 
+            });
+        });
+    }
+    toggleRadioBtn(importRadioBtn);
+    toggleRadioBtn(payRadioBtn);
+
+    //===================================== ВАЛІДАТОР ДЛЯ ДРУГОЇ ФОРМИ ===========================================
+    const form = document.querySelector('#ordering'),
+          submitBtn = form.querySelector('#secondSubmit'),
+          requiredInputs = form.querySelectorAll('.checkRequired'),
+          requiredCheckbox = form.querySelector('.agree');
+
+    let filled = [], 
+        filledCount;
+
+    requiredInputs.forEach((requiredInput, i) => {
+        requiredInput.addEventListener('input', () => {
+            filledCount = 0;
+            if (requiredInput.value) {  // якщо щось введено
+                filled[i] = true;
+            } else {
+                filled[i] = false;
+            }
+            for (let x = 0; x < filled.length; x++) {
+                if (filled[x]) {
+                    filledCount++;
+                }
+            }
+            changeSubmitBtn();
+        });  
+    });
+    
+    requiredCheckbox.addEventListener('change', () => {
+        changeSubmitBtn();
+    });
+
+    const changeSubmitBtn = () => {
+        if (filledCount == 5 && requiredCheckbox.checked) {
+            submitBtn.classList.remove('blocked');
+        } else {
+            submitBtn.classList.add('blocked');
         }
     }
 });
