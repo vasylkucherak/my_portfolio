@@ -108,6 +108,14 @@ hamburger.addEventListener('click', () => {
     menu.classList.add('active');
 });
 
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > window.innerHeight - 1) {
+        hamburger.classList.add('active');
+    } else {
+        hamburger.classList.remove('active');
+    }
+});
+
 menuLink.forEach(link => {
     link.addEventListener('click', () => {
         menu.classList.remove('active');

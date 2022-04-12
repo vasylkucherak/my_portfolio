@@ -28,6 +28,7 @@
     &__item {
         position: relative;
         transition: .5s all;
+        overflow: hidden;
         img {
             width: 100%;
             height: 100%;
@@ -52,7 +53,7 @@
         }
         &:hover {
             img {
-                transform: scale(1.04);
+                transform: scale(1.1);
             }
             span {
                 opacity: 1;
