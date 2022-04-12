@@ -1,11 +1,10 @@
 .promo {
-    min-height: calc(100vh - 205px);
+    min-height: calc(100vh);
     position: relative;
     
     &__bg {
         min-height: 100vh;
         width: 100vw;
-        transform: translateY(-205px);
         position: fixed;
         background: url('../img/main_bg.jpg') no-repeat 50% / cover;
     }
@@ -25,11 +24,14 @@
         width: 600px;
     }
     &__subtitle {
-        margin-top: 205px;
+        padding-top: 205px;
         position: relative;
         padding-left: 11px;
         z-index: 2;
         @include before_circle;
+        &:before {
+            top: 198px;
+        }
     }
     &__btns {
         margin-top: 25px;

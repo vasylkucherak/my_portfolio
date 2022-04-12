@@ -1,7 +1,7 @@
 .btn {
     height: 45px;
     background: $main-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, .15);
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, .20);
     padding: 12px 25px;
     &_invis {
         background-color: rgba(0, 0, 0, 0);
@@ -9,6 +9,44 @@
         &:hover {
             color: #000;
             background: rgba(256, 256, 256, .5);
+        }
+    }
+}
+.up_btn {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 25px;
+    right: 25px;
+    transition: .3s all;
+    z-index: 9;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    .up_bg {
+        margin: 1px;
+        width: 28px;
+        height: 28px;
+        background-color: #000;
+        transition: .3s all;
+        border-radius: 50%;
+        box-shadow: rgb(0 0 0 / 35%) 2px 6px 4px;
+    }
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+    }
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    &:hover {
+        transform: translateY(-3px);
+        .up_bg {
+            background-color: #fff;
         }
     }
 }

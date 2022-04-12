@@ -1,6 +1,7 @@
 'use strict'
 
 // AnimationByScroll
+const upBtn = document.querySelector('.up_btn');
 let isScrolling = false;
 
 window.addEventListener("scroll", throttleScroll, false);
@@ -13,6 +14,14 @@ function throttleScroll(e) {
         });
     }
     isScrolling = true;
+
+    if (window.pageYOffset > window.innerHeight - 1) {
+        hamburger.classList.add('active');
+        upBtn.classList.add('active');
+    } else {
+        hamburger.classList.remove('active');
+        upBtn.classList.remove('active');
+    }
 }
 
 document.addEventListener("DOMContentLoaded", scrolling, false);
@@ -106,14 +115,6 @@ const hamburger = document.querySelector('.hamburger'),
 
 hamburger.addEventListener('click', () => {
     menu.classList.add('active');
-});
-
-window.addEventListener('scroll', function() {
-    if (window.pageYOffset > window.innerHeight - 1) {
-        hamburger.classList.add('active');
-    } else {
-        hamburger.classList.remove('active');
-    }
 });
 
 menuLink.forEach(link => {
