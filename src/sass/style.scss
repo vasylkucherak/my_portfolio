@@ -10,6 +10,7 @@
     padding: 0;
 }
 body {
+    position: relative;
     &::-webkit-scrollbar {
         width: 0;
     }
@@ -30,6 +31,20 @@ body {
     width: 500px;
     height: 2px;
     background-color: #ddd;
+}
+.progress-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 5px;
+    background: #ccc;
+    z-index: 10;
+}
+.progress-bar {
+    width: inherit;
+    background: $main-color;
+    height: 0%;
 }
 
 @import 'blocks/promo';
