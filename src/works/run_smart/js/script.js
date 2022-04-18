@@ -150,15 +150,6 @@ $(document).ready(function(){
         }
     }
 
-    function isFullyVisible(el) {
-        const elementBoundary = el.getBoundingClientRect();
-
-        const top = elementBoundary.top;
-        const bottom = elementBoundary.bottom;
-
-        return ((top >= 0) && (bottom <= window.innerHeight));
-    }
-
     function isHalfyVisible(el) {
         const elementBoundary = el.getBoundingClientRect();
 
@@ -167,15 +158,5 @@ $(document).ready(function(){
         const half = elementBoundary.height / 2;
 
         return ((top + half >= 0) && (half + window.innerHeight >= bottom));
-    }
-
-    function isPartiallyVisible(el) {
-        const elementBoundary = el.getBoundingClientRect();
-
-        const top = elementBoundary.top;
-        const bottom = elementBoundary.bottom;
-        const height = elementBoundary.height;
-
-        return ((top + height >= 0) && (height + window.innerHeight >= bottom));
     }
 });
